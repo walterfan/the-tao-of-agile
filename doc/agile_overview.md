@@ -136,10 +136,16 @@ Scrum 是一个轻量的框架，它通过提供针对复杂问题的自适应�
 
 ### User Story Priority
 
-P1. must have: 必须有, 紧急并重要的任务  Urgent + Important
-P2. should have: 应该有，不紧急但重要的任务 Important
-P3. could have: 可以有, 紧急但不重要的任务  Urgent
-P4. won't have: 最好有, 不紧急也不重要的任务
+Priority 优先级 (MoSCoW Prioritization Method)
+
+* P1 – Must have: What is described in the User Story must be developed compulsorily.
+  必须有, 紧急并重要的任务  Urgent + Important
+* P2 – Should have: The User Story should be developed if possible.
+  应该有，不紧急但重要的任务 Important
+* P3 – Could have: It could be developed, but it is not essential for users or business teams.
+  可以有, 紧急但不重要的任务  Urgent
+* P4 – Won't have: It won't be included in the medium term, but it could be useful in a later version.
+  最好有, 也可以没有，不紧急也不重要的任务
 
 ### Example
 
@@ -147,8 +153,7 @@ P4. won't have: 最好有, 不紧急也不重要的任务
 
 #### Description
 - 英文的 RFC 的输入可以是 txt 或者 pdf 格式，中文的 RFC 的输出可以是相同的格式
-- 文本的翻译可以调用 Google, Bing 或者 Baidu 的 API, 要求是免费并且快速, 对文本的长度没有限制
-
+- 文本的翻译可以调用 Google, Bing 或者 Baidu 的 API, 要求是免费并且快速, 对文本的长度没有过多限制（可翻译至少 100页文本）
 
 #### DoD (Definition of Done)
 - 代码实现符合详细设计和上述描述要求，没有严重 bug
