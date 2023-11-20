@@ -14,3 +14,5 @@
 * [Sprint Retrospective Meeting](doc/source/1.basic/sprint_retrospective.md)
 * [Bug Report Tips](doc/source/1.basic/bug_report_template.md)
 * [User Story Tips](doc/source/1.basic/user_story_template.md)
+* [Git Rules](doc/source/2.cd/git_rules.md)
+* [Merge Request Rules](doc/source/2.cd/mr_rules.md)
