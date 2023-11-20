@@ -30,6 +30,43 @@ job 由 runners 执行。如果有足够多的并发运行程序，同一阶段�
 4. 一个 production 阶段，有一个名为 deploy-to-prod的 job。
 
 
+## 安装并注册 gitlab runner
+
+在执行 pipeline 上机器上安装 gitlab runner
+
+### Download the binary for your system
+
+```
+sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+```
+
+### Give it permission to execute
+```
+sudo chmod +x /usr/local/bin/gitlab-runner
+```
+
+### Create a GitLab Runner user
+```
+sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+```
+
+### Install and run as a service
+
+```
+sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+sudo gitlab-runner start
+```
+
+在项目的设置中添加 gitlab runner , 并在作为 runner 的机器上运行
+
+```
+gitlab-runner register  --url http://xxxxxx  --token xxxxxx
+```
+
+runner 的 execitpr 可以先选择 shell , 运行之后会生成一个配置文件 ~/.gitlab-runner/config.toml"
+
+
+
 ## 参考资料
 * https://docs.gitlab.com/ee/ci/pipelines/
 * https://docs.gitlab.cn/jh/ci/pipelines/

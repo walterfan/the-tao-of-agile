@@ -10,3 +10,4 @@
    overview
    git_rules
    gitlab_ci
+   mr_rules
