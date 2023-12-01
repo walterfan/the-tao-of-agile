@@ -1,0 +1,39 @@
+enum Level {
+    LOW
+    MEDIUM
+    HIGH
+}
+
+enum Season {
+    SUMMER
+    AUTUMN
+    WINTER
+    SPRING
+}
+
+type Story {
+    name: String
+    legs: Int
+    age: Int
+    canFly: Boolean
+}
+
+type Flower {
+    name: String
+    bloomsIn: Season
+    color: String
+    waterNeeds: Level
+}
+
+type Car {
+    make: String
+    model: String
+    year: Int
+}
+
+type Query {
+  getAnimals: [Animal]
+  getFlowers: [Flower]
+  getCars: [Car]
+}
+@catharyna-angela
