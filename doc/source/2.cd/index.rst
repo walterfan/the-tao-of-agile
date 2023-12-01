@@ -9,5 +9,6 @@
 
    overview
    git_rules
+   git_tips
    gitlab_ci
    mr_rules

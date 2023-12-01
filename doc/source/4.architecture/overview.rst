@@ -1,5 +1,5 @@
 ######################
-GStreamer 应用
+敏捷架构
 ######################
 
 .. include:: ../links.ref
@@ -7,7 +7,7 @@ GStreamer 应用
 .. include:: ../abbrs.ref
 
 ============ ==========================
-**Abstract** GStreamer 应用
+**Abstract** 敏捷架构
 **Authors**  Walter Fan
 **Status**   WIP as draft
 **Updated**  |date|
@@ -17,6 +17,6 @@ GStreamer 应用
    :local:
 
 
-GStreamer 应用
+敏捷架构
 =======================
 

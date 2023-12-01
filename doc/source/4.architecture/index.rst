@@ -1,5 +1,5 @@
 #################################
-4. Metrics Drive Development
+4. Architecture
 #################################
 
 
@@ -8,3 +8,4 @@
    :caption: Contents:
 
    overview
+   graph_model
