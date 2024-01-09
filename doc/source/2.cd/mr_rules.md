@@ -12,7 +12,7 @@ Merge request 也称 Pull request, 在实践过程中，总结了如下的规则
 
   ```
   git commit -m "this is my commit message. Ref projectname#xxx" 
-  git commit-m "fix memory leak issue. Ref echostar-backlog#123"
+  git commit-m "fix memory leak issue. Ref issue#123"
   ```
 
   * 3.2 在 merge request 的描述里提及相应的 git issue
