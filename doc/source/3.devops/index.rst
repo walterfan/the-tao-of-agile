@@ -1,5 +1,5 @@
 #######################
-3. DevOps
+3. 开发做运维 DevOps
 #######################
 
 
@@ -8,3 +8,5 @@
    :caption: Contents:
 
    overview
+   automation
+   ansible

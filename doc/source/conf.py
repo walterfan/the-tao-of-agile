@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'gstreamer_tutorial'
-copyright = '2021 ~ 2023, Walter Fan, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License'
+project = 'The Tao of Agile'
+copyright = '2021 ~ 2035, Walter Fan, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License'
 author = 'Walter Fan'
 
 

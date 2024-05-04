@@ -1,5 +1,5 @@
 #################################
-4. Architecture
+4. 敏捷架构 Architecture
 #################################
 
 
@@ -10,6 +10,10 @@
    overview
    graph_model
    rpc_rest_graphql
+
+   pattern
+   clean_code
+   good_code
 
    micro-profile-config
    micro-profile-fault-tolerance

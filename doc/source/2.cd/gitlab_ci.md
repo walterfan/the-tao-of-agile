@@ -1,9 +1,52 @@
 # gitlab CI
 
-## gitlab runner
+## overview
 
-1. 确保您有可用的 runner 运行您的作业。 如果您没有 runner，需要为您的示例、项目或群组安装 GitLab Runner并注册 runner。
-2. 在仓库的根目录下创建一个 .gitlab-ci.yml 文件。该文件是您定义 CI/CD 作业的地方。
+
+1. 在你的构建服务器上安装 gitlab runner
+
+```sh
+Install gitlab runner on your build server
+# Download the binary for your system
+sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-arm64
+
+# Give it permission to execute
+sudo chmod +x /usr/local/bin/gitlab-runner
+
+# Create a GitLab Runner user
+sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+
+# Install and run as a service
+sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+sudo gitlab-runner start
+
+```
+
+更多信息参见 https://docs.gitlab.com/runner/install/linux-manually.html
+
+2. 在 gitlab 项目的设置中，选择 gitrunner 页面，新建一个 gitlab runner , 并在构建服务器上注册它
+
+### Step 1
+
+Copy and paste the following command into your command line to register the runner.
+```sh
+$ gitlab-runner register  --url ${your_gitlab_url} --token ${your_toke_string}
+```
+
+The runner token ${your_toke_string}  displays only for a short time, and is stored in the config.toml after you register the runner. It will not be visible once the runner is registered.
+
+## Step 2
+
+Choose an executor when prompted by the command line. Executors run builds in different environments. Not sure which one to select? 
+
+## Step 3 (optional)
+Manually verify that the runner is available to pick up jobs.
+```sh
+$ gitlab-runner run
+```
+
+This may not be needed if you manage your runner as a system or user service .
+
 
 ## gitlab build pipeline
 
@@ -29,28 +72,32 @@ job 由 runners 执行。如果有足够多的并发运行程序，同一阶段�
 3. 一个 staging 阶段，有一个名为 deploy-to-stage 的 job。
 4. 一个 production 阶段，有一个名为 deploy-to-prod的 job。
 
+## gitlab runner
 
-## 安装并注册 gitlab runner
+1. 确保您有可用的 runner 运行您的作业。 如果您没有 runner，需要为您的示例、项目或群组安装 GitLab Runner并注册 runner。
+2. 在仓库的根目录下创建一个 .gitlab-ci.yml 文件。该文件是您定义 CI/CD 作业的地方。
+
+### 安装并注册 gitlab runner
 
 在执行 pipeline 上机器上安装 gitlab runner
 
-### Download the binary for your system
+#### Download the binary for your system
 
 ```
 sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
 ```
 
-### Give it permission to execute
+#### Give it permission to execute
 ```
 sudo chmod +x /usr/local/bin/gitlab-runner
 ```
 
-### Create a GitLab Runner user
+#### Create a GitLab Runner user
 ```
 sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 ```
 
-### Install and run as a service
+#### Install and run as a service
 
 ```
 sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
@@ -65,7 +112,9 @@ gitlab-runner register  --url http://xxxxxx  --token xxxxxx
 
 runner 的 execitpr 可以先选择 shell , 运行之后会生成一个配置文件 ~/.gitlab-runner/config.toml"
 
+## Create Gitlab CI script .gitlab-ci.yml 
 
+`.gitlab-ci.yml` 是定义持续集成 job 的核心脚本
 
 ## 参考资料
 * https://docs.gitlab.com/ee/ci/pipelines/

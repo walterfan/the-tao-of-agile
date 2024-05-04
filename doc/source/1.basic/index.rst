@@ -16,3 +16,5 @@
 
    user_story_tips
    bug_report_tips
+
+   isp
