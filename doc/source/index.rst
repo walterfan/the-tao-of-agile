@@ -31,6 +31,7 @@ The Tao of Agile
    2.cd/index
    3.devops/index
    4.architecture/index
+   5.method/index
 
 Indices and tables
 ==================
