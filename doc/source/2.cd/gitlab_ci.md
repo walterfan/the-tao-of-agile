@@ -37,7 +37,7 @@ The runner token ${your_toke_string}  displays only for a short time, and is sto
 
 ## Step 2
 
-Choose an executor when prompted by the command line. Executors run builds in different environments. Not sure which one to select? 
+Choose an executor when prompted by the command line. Executors run builds in different environments. Not sure which one to select?
 
 ## Step 3 (optional)
 Manually verify that the runner is available to pick up jobs.
