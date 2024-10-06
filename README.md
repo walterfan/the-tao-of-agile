@@ -10,9 +10,17 @@
 * [Sprint Plan Meeting](doc/source/1.basic/sprint_plan.md)
 * [Sprint Review Meeting](doc/source/1.basic/sprint_review.md)
 * [Sprint Retrospective Meeting](doc/source/1.basic/sprint_retrospective.md)
-* [Bug Report Tips](doc/source/1.basic/bug_report_template.md)
-* [User Story Tips](doc/source/1.basic/user_story_template.md)
-* ...
+* [Bug Report Tips](doc/source/1.basic/bug_report_tips.md)
+* [User Story Tips](doc/source/1.basic/user_story_tips.md)
+* 常用模板
+  - [initiative](doc/source/1.basic/template/initiative.md)
+  - [feature](doc/source/1.basic/template/feature.md)
+  - [story](doc/source/1.basic/template/story.md)
+  - [bug](doc/source/1.basic/template/bug.md)
+  - [sprint plan invitaion](doc/source/1.basic/template/sprint_plan.md) - [冲刺计划会议邀请模板](doc/source/1.basic/template/sprint_plan_cn.md)
+  - [sprint review invitation](doc/source/1.basic/template/sprint_review.md) - [冲刺回顾会议邀请模板](doc/source/1.basic/template/sprint_review_cn.md)
+  - [sprint restrospective invitation](doc/source/1.basic/template/sprint_retrospective.md) - [冲刺反思会议邀请模板](doc/source/1.basic/template/sprint_retrospective_cn.md)
+
 
 ## 2. CI/CD 持续集成与交付
 

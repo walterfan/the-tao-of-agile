@@ -1,12 +1,13 @@
-# Parent Issue
+# User Story
+## Parent Issue
 
 Issue #{{ issue_number }}
 
-# Priority
+## Priority
 
 P1(Must have) / P2(Should have) / P3(Could have) / P4(Won't have)
 
-# Description
+## Description
 
 > The description of US should comply with the INVEST principle.
 >
@@ -22,7 +23,7 @@ P1(Must have) / P2(Should have) / P3(Could have) / P4(Won't have)
 * {{ description2 }}
 * {{ description3 }}
 
-# DoD (Definition of Done)
+## DoD (Definition of Done)
 
 > Please note the difference between Description and DoD. The following content can be added or deleted according to the actual situation.
 
@@ -34,5 +35,5 @@ If there are code changes:
 - Code changes should have corresponding test cases and test results (Unit testing, API testing or manual testing).
 - The code implementation should comply with the detailed design and the above description requirements, without serious bugs, and pass the Acceptance Test Case.
 
-# Verifier
+## Verifier
 @{{ verifier }}
