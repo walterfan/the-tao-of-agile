@@ -7,6 +7,15 @@
 * 实现的具体的功能：XXXXXX
 * 实现时需要考虑的技术细节：XXXXXX
 
+1. What is the problem? 
+2. What is the root cause? 
+3. What is the solution?
+  - 1) Success criteria (DoD) 
+  - 2) UE/UX Impacts 
+  - 3) Metrics: LMTA(Log, Metrics, Tracing, Alert)
+  - 4) Dependencies
+  - 5) Risks
+
 ### DoD (Definition of Done)
 例如:
 - 代码实现符合详细设计和上述描述要求，没有严重 bug
