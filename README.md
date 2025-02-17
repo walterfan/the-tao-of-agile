@@ -1,6 +1,6 @@
 # The Tao of Agile 
 
-敏捷之道
+[敏捷之道](https://walterfan.github.io/the-tao-of-agile/)
 
 ## 1. Agile Tao 敏捷之道
 
