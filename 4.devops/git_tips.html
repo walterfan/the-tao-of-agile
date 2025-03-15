@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>git tips &mdash; The Tao of Agile 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e536ea0c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="gitlab CI" href="gitlab_ci.html" />
+    <link rel="prev" title="git rules" href="git_rules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            The Tao of Agile
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1.method/index.html">1. Agile Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2.architecture/index.html">2. Agile Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3.program/index.html">3. Agile Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Agile DevOps</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">DevOps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation.html">Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansible.html">Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd.html">持续交付概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_rules.html">git rules</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">git tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1. 代码会存在于三个区域：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2. 代码从拉到推</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3. 替换本地改动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4. 创新切换删除分支</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5. 查看及修改历史</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">6. 比较区别</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">7. 管理标签</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">8. 子模块和子树</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subtree">subtree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">9. 回退及合并</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">10. 冲突解决</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-detached-head-on-a-git-repository">A DETACHED HEAD ON A GIT REPOSITORY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gitlab_ci.html">gitlab CI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mr_rules.html">Merge Request Rules</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Tao of Agile</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">4. Agile DevOps</a></li>
+      <li class="breadcrumb-item active">git tips</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/4.devops/git_tips.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git-tips">
+<h1>git tips<a class="headerlink" href="#git-tips" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>1. 代码会存在于三个区域：<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>工作区 working directory</p></li>
+<li><p>暂存区 staging area</p></li>
+<li><p>仓库区 repository</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2>2. 代码从拉到推<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>以上两条命令等于 git pull origin <branch></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>以上两条命令等于 git pull origin <branch> –rebase</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">xxx</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;xxx&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>3. 替换本地改动<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>撤销工作区修改</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span> <span class="o">&lt;</span><span class="n">filepath</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>撤销暂存区修改</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span> <span class="o">&lt;</span><span class="n">filepath</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>用远程仓库中的代码覆盖本地代码</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">remote</span> <span class="o">&lt;</span><span class="n">branchname</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">remote</span><span class="o">/</span><span class="n">branch</span> <span class="o">--</span> <span class="n">a</span><span class="o">/</span><span class="n">file</span> <span class="n">b</span><span class="o">/</span><span class="n">file</span>
+<span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">remote</span><span class="o">/</span><span class="n">branch</span>
+<span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">HEAD</span>
+<span class="n">git</span> <span class="n">reset</span> <span class="o">&lt;</span><span class="n">commit_hash_id</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">filepath</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>4. 创新切换删除分支<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>创新分支 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">&lt;branchname&gt;</span></code></p></li>
+<li><p>切换分支 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">&lt;branchname&gt;</span></code></p></li>
+<li><p>删除分支 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-d</span> <span class="pre">&lt;branchname&gt;</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p>删除远程分支:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="o">&lt;</span><span class="n">branchname</span><span class="o">&gt;</span>
+   <span class="ow">or</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="o">&lt;</span><span class="n">branchname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>清空本地分支: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">prune</span> <span class="pre">origin</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>查看分支 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code></p></li>
+<li><p>重命名分支</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">m</span> <span class="o">&lt;</span><span class="n">old_branch_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">new_branch_name</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">new_branch_name</span><span class="o">&gt;</span>
+
+<span class="c1">#note: origin is a remote repo</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">repo_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">git_url</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>比较分支</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="o">&lt;</span><span class="n">branch1</span><span class="o">&gt;..&lt;</span><span class="n">branch2</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">stat</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>5. 查看及修改历史<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>显示最近5次的提交的概要历史记录</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">graph</span> <span class="o">--</span><span class="n">stat</span> <span class="o">--</span><span class="n">oneline</span> <span class="o">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>显示最近3次的提交的详细历史记录</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="mi">3</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>合并最近几次 commits 到一个</p></li>
+</ul>
+<p>git rebase –interactive HEAD~2</p>
+<p>then select the last commit and replace ‘pick’ with ‘squash’</p>
+<p>save this editing, then go to another editing, update the commit message and save again</p>
+<ul class="simple">
+<li><p>从提交记录中删除 large file</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="nb">filter</span><span class="o">-</span><span class="n">branch</span> <span class="o">--</span><span class="n">tree</span><span class="o">-</span><span class="nb">filter</span> <span class="s1">&#39;rm -f large_file&#39;</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>6. 比较区别<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>比较工作区和暂存区 git diff</p></li>
+<li><p>比较暂存区和仓库区 git diff –cached</p></li>
+<li><p>比较工作区和仓库区 git diff HEAD</p></li>
+<li><p>比较两个分支 git diff branch_1..branch_2</p></li>
+<li><p>与 stash 的内容比较: git stash show -p stash&#64;{1},  stash&#64;{1} 可以省略, 默认是第一个</p></li>
+</ol>
+</section>
+<section id="id7">
+<h2>7. 管理标签<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>显示标签</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>添加标签</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span><span class="n">tagname</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">m</span> <span class="o">&lt;</span><span class="n">comments</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>推送标签</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="n">tags</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>获取远程标签</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="n">tag</span> <span class="o">&lt;</span><span class="n">tagname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>删除标签</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">tagname</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/&lt;</span><span class="n">tagname</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="n">tag</span> <span class="o">&lt;</span><span class="n">tagname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>检出标签对应的代码</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/&lt;</span><span class="n">tag_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h2>8. 子模块和子树<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>添加子模块</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">add</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">chromium</span><span class="o">.</span><span class="n">googlesource</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">v8</span><span class="o">/</span><span class="n">v8</span><span class="o">.</span><span class="n">git</span> <span class="n">third_path</span><span class="o">/</span><span class="n">v8</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>初始化子模块</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">init</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>修改子模块</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git submodule update --init --recursive
+
+git submodule update –remote
+
+git commit -a -m &quot;update sub module&quot; &amp;&amp; git push origin master
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>更改子模块的地址</p></li>
+</ul>
+<ul class="simple">
+<li><p>first, edit the .gitmodules file to update the URL and</p></li>
+<li><p>then run git submodule sync –recursive to reflect that change to the superproject and your working</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">sync</span> <span class="o">--</span><span class="n">recursive</span>
+<span class="n">cd</span> <span class="o">&lt;</span><span class="n">submodule_dir</span><span class="o">&gt;</span> 
+
+<span class="n">git</span> <span class="n">fetch</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="n">master</span> <span class="o">-</span><span class="n">f</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>删除子模块</p></li>
+</ul>
+<p>以子模块 third_party/rapidjson 为例</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">deinit</span> <span class="o">-</span><span class="n">f</span> <span class="o">--</span> <span class="n">third_party</span><span class="o">/</span><span class="n">rapidjson</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">rapidjson</span>
+<span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">third_party</span><span class="o">/</span><span class="n">rapidjson</span>
+</pre></div>
+</div>
+<section id="subtree">
+<h3>subtree<a class="headerlink" href="#subtree" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">subtree</span> <span class="n">add</span>   <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">prefix</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">commit</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">subtree</span> <span class="n">add</span>   <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">prefix</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">repository</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ref</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">subtree</span> <span class="n">pull</span>  <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">prefix</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">repository</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ref</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">subtree</span> <span class="n">push</span>  <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">prefix</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">repository</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ref</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">subtree</span> <span class="n">merge</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">prefix</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">commit</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">subtree</span> <span class="n">split</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=&lt;</span><span class="n">prefix</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">commit</span><span class="o">&gt;</span><span class="p">]</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id9">
+<h2>9. 回退及合并<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>rollback</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="mi">10</span>
+<span class="n">git</span> <span class="n">reset</span> <span class="n">xxx</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branchname</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">force</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>merge commits</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span><span class="o">-</span><span class="n">base</span> <span class="n">your_branch</span> <span class="n">master</span>
+<span class="o">...</span> <span class="n">the</span> <span class="n">commit</span> <span class="n">ID</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span> <span class="n">out</span> <span class="k">as</span> <span class="n">a</span> <span class="n">result</span><span class="o">.</span> <span class="n">Or</span> <span class="n">use</span> <span class="s1">&#39;git rebase -i HEAD~N&#39;</span> <span class="n">where</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">commits</span><span class="o">.</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">commit_ID_above</span><span class="o">&gt;</span>
+<span class="o">...</span> <span class="n">replace</span> <span class="s2">&quot;pick&quot;</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">input</span> <span class="k">with</span> <span class="s2">&quot;squash&quot;</span> <span class="n">to</span> <span class="n">squash</span> <span class="n">the</span> <span class="n">commit</span><span class="o">.</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span> <span class="n">origin</span> <span class="n">your_branch</span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h2>10. 冲突解决<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span>
+<span class="n">git</span> <span class="n">stash</span> <span class="n">pop</span>
+
+<span class="c1"># resolve conflict manually, add it </span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="o">--</span><span class="k">continue</span>
+
+</pre></div>
+</div>
+<section id="a-detached-head-on-a-git-repository">
+<h3>A DETACHED HEAD ON A GIT REPOSITORY<a class="headerlink" href="#a-detached-head-on-a-git-repository" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Create a branch called “temp” by typing: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">temp</span></code></p></li>
+<li><p>Switch over to your new branch by checking it out: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">temp</span></code></p></li>
+<li><p>Point the master pointer to the temp branch pointer (the-f means force): <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-f</span> <span class="pre">master</span> <span class="pre">temp</span></code></p></li>
+<li><p>Switch back to the master branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code></p></li>
+<li><p>Now we delete our temp branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-d</span> <span class="pre">temp</span></code></p></li>
+<li><p>Push our new changes to the remote repository: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="git_rules.html" class="btn btn-neutral float-left" title="git rules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gitlab_ci.html" class="btn btn-neutral float-right" title="gitlab CI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021 ~ 2035, Walter Fan, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
