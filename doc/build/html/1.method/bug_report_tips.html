@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Report Tips &mdash; The Tao of Agile 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e536ea0c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="软件开发过程" href="isp.html" />
+    <link rel="prev" title="User Story Tips" href="user_story_tips.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            The Tao of Agile
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Agile Method</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="agile_overview.html">敏捷方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="agile_overview.html#id6">敏捷实践</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xp.html">XP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scrum.html">Scrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprint_plan.html">Sprint Plan Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprint_review.html">Sprint Review Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprint_retrospective.html">sprint retrospective meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_story_tips.html">User Story Tips</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bug Report Tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bug-descrption">Bug descrption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">发现问题的组件和版本号</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bug">Bug 严重程度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">复现问题的相关步骤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">描述期待行为与当前行为</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">bug 原因的相关分析</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="isp.html">软件开发过程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd.html">TDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdd.html">MDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ddd.html">DDD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2.architecture/index.html">2. Agile Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3.program/index.html">3. Agile Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4.devops/index.html">4. Agile DevOps</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Tao of Agile</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">1. Agile Method</a></li>
+      <li class="breadcrumb-item active">Bug Report Tips</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/1.method/bug_report_tips.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bug-report-tips">
+<h1>Bug Report Tips<a class="headerlink" href="#bug-report-tips" title="Link to this heading"></a></h1>
+<section id="bug-descrption">
+<h2>Bug descrption<a class="headerlink" href="#bug-descrption" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>发现问题的组件和版本号<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>例如 admin-server v1.0.1</p>
+</section>
+<section id="bug">
+<h3>Bug 严重程度<a class="headerlink" href="#bug" title="Link to this heading"></a></h3>
+<p>可以是以下任一个级别</p>
+<ul class="simple">
+<li><p>S1(blocker)</p></li>
+<li><p>S2(critical)</p></li>
+<li><p>S3(major)</p></li>
+<li><p>S4(minor)</p></li>
+<li><p>S5(trivial)</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>复现问题的相关步骤<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>Steps:</p>
+<ol class="arabic simple">
+<li><p>XXXXXXXX</p></li>
+<li><p>XXXXXXXX</p></li>
+<li><p>XXXXXXXX</p></li>
+</ol>
+</section>
+<section id="id3">
+<h3>描述期待行为与当前行为<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>期待行为 expected behaviour:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>XXXXXXXX</p></li>
+<li><p>XXXXXXXX</p></li>
+</ol>
+<ul class="simple">
+<li><p>实际行为 actual behaviour:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>XXXXXXXX</p></li>
+<li><p>XXXXXXXX</p></li>
+</ol>
+</section>
+<section id="id4">
+<h3>bug 原因的相关分析<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>What’s the problem</p></li>
+<li><p>What’s the root cause</p></li>
+<li><p>What’s the solution</p></li>
+<li><p>How to prevent similar problems from happening again</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user_story_tips.html" class="btn btn-neutral float-left" title="User Story Tips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="isp.html" class="btn btn-neutral float-right" title="软件开发过程" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021 ~ 2035, Walter Fan, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
