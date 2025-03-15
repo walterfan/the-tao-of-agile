@@ -1,5 +1,5 @@
 #######################
-3. 开发做运维 DevOps
+2. Agile Architecture
 #######################
 
 
@@ -8,5 +8,4 @@
    :caption: Contents:
 
    overview
-   automation
-   ansible
+   minikube

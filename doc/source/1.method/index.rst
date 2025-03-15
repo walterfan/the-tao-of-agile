@@ -1,5 +1,5 @@
 ########################
-1. 敏捷方法实战
+1. Agile Method
 ########################
 
 
@@ -9,7 +9,7 @@
 
    agile_overview
    xp
-   
+   scrum
    sprint_plan
    sprint_review
    sprint_retrospective
@@ -18,3 +18,6 @@
    bug_report_tips
 
    isp
+   tdd
+   mdd
+   ddd

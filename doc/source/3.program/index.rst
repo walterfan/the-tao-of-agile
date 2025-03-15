@@ -1,5 +1,5 @@
 #################################
-4. 敏捷架构 Architecture
+3. Agile Programming
 #################################
 
 
@@ -17,3 +17,6 @@
 
    micro-profile-config
    micro-profile-fault-tolerance
+
+   test_mock
+   test_in_java

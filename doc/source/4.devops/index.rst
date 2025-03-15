@@ -1,6 +1,6 @@
-###################################
-2. 持续交付 Continus Delivery
-###################################
+#######################
+4. Agile DevOps
+#######################
 
 
 .. toctree::
@@ -8,6 +8,9 @@
    :caption: Contents:
 
    overview
+   automation
+   ansible
+   cd
    git_rules
    git_tips
    gitlab_ci
