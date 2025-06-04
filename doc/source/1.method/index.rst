@@ -17,6 +17,8 @@
    user_story_tips
    bug_report_tips
 
+   code_review
+
    isp
    tdd
    mdd
