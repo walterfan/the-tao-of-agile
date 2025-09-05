@@ -18,7 +18,7 @@
   * 常用模板
     - [initiative](doc/source/1.method/template/initiative.md)
     - [feature](doc/source/1.method/template/feature.md)
-    - [story](doc/doc/source/1.method/template/story.md)
+    - [story](doc/source/1.method/template/story.md)
     - [bug](doc/source/1.method/template/bug.md)
     - [sprint plan invitaion](doc/source/1.method/template/sprint_plan.md) - [冲刺计划会议邀请模板](doc/source/1.basic/template/sprint_plan_cn.md)
     - [sprint review invitation](doc/source/1.method/template/sprint_review.md) - [冲刺回顾会议邀请模板](doc/source/1.basic/template/sprint_review_cn.md)
