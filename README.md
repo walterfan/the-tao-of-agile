@@ -4,7 +4,7 @@
 
 ## 1. Agile Tao 敏捷之道
 
-* [敏捷开发方法概述](doc/source/1.basic/agile_overview.md)
+* [敏捷开发方法概述](doc/source/1.method/agile_overview.md)
 * [敏捷开发实践分享](refer/agile_method_sharing.pdf)
 * Scrum
   ![class diagram](https://github.com/user-attachments/assets/de1a2667-d362-44b8-b919-6e2cf9fc39f1)
@@ -20,9 +20,9 @@
     - [feature](doc/source/1.method/template/feature.md)
     - [story](doc/source/1.method/template/story.md)
     - [bug](doc/source/1.method/template/bug.md)
-    - [sprint plan invitaion](doc/source/1.method/template/sprint_plan.md) - [冲刺计划会议邀请模板](doc/source/1.basic/template/sprint_plan_cn.md)
-    - [sprint review invitation](doc/source/1.method/template/sprint_review.md) - [冲刺回顾会议邀请模板](doc/source/1.basic/template/sprint_review_cn.md)
-    - [sprint restrospect invitation](doc/source/1.method/template/sprint_retrospective.md) - [冲刺反思会议邀请模板](doc/source/1.basic/template/sprint_retrospective_cn.md)
+    - [sprint plan invitaion](doc/source/1.method/template/sprint_plan.md) - [冲刺计划会议邀请模板](doc/source/1.method/template/sprint_plan_cn.md)
+    - [sprint review invitation](doc/source/1.method/template/sprint_review.md) - [冲刺回顾会议邀请模板](doc/source/1.method/template/sprint_review_cn.md)
+    - [sprint restrospect invitation](doc/source/1.method/template/sprint_retrospective.md) - [冲刺反思会议邀请模板](doc/source/1.method/template/sprint_retrospective_cn.md)
 
 
 ## 2. CI/CD 持续集成与交付
