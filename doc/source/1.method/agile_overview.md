@@ -179,3 +179,140 @@ S2. Critical issue
 S3. Major issue
 S4. Minor issue
 S5. Trival issue
+
+
+In **Agile / Scrum**, **DoR** and **DoD** are two lightweight but *very powerful* agreements that keep teams from drifting into chaos or endless rework.
+
+---
+
+## 1️⃣ DoR — *Definition of Ready*
+
+**Question it answers:**
+👉 *“Is this work item ready to be pulled into a sprint?”*
+
+### What DoR means
+
+A **Definition of Ready** is a checklist that a **User Story / backlog item must satisfy before the team starts working on it**.
+
+If a story is **not “Ready”**, it should **not enter the sprint**.
+
+### Typical DoR criteria
+
+A story is “Ready” when:
+
+* ✅ Clear **business value**
+* ✅ Well-written **user story**
+* ✅ **Acceptance criteria** defined
+* ✅ Dependencies identified (or resolved)
+* ✅ Testable
+* ✅ Estimated (or small enough to estimate)
+* ✅ No obvious ambiguity
+
+### Example DoR
+
+```text
+A user story is Ready when:
+- Business goal is understood
+- Acceptance criteria are written
+- Dependencies are identified
+- Team agrees it can be completed in one sprint
+```
+
+### Why DoR matters
+
+* Prevents “We don’t know what to do” mid-sprint
+* Reduces interruptions & re-planning
+* Protects the sprint commitment
+
+> 💡 Without DoR, sprint planning becomes gambling.
+
+---
+
+## 2️⃣ DoD — *Definition of Done*
+
+**Question it answers:**
+👉 *“Can we truly say this work is finished?”*
+
+### What DoD means
+
+A **Definition of Done** is a shared agreement on **what “done” really means**.
+
+Not “code finished”, but **production-ready**.
+
+### Typical DoD criteria
+
+A story is “Done” when:
+
+* ✅ Code completed
+* ✅ Code reviewed
+* ✅ Unit tests written & passing
+* ✅ Integration tests passed
+* ✅ Meets acceptance criteria
+* ✅ Documentation updated
+* ✅ No critical bugs
+* ✅ Deployable / deployed
+
+### Example DoD
+
+```text
+A story is Done when:
+- Code merged to main branch
+- All CI checks pass
+- Acceptance criteria satisfied
+- No critical defects
+- Ready for release
+```
+
+### Why DoD matters
+
+* Avoids “90% done” forever
+* Ensures consistent quality
+* Makes velocity meaningful
+* Builds trust with stakeholders
+
+> 💡 Without DoD, “done” becomes a negotiation every sprint.
+
+---
+
+## 3️⃣ DoR vs DoD (Side-by-Side)
+
+| Aspect   | DoR                 | DoD                    |
+| -------- | ------------------- | ---------------------- |
+| Timing   | Before sprint       | End of work            |
+| Focus    | Clarity & readiness | Quality & completeness |
+| Protects | Sprint planning     | Product quality        |
+| Question | “Can we start?”     | “Can we release?”      |
+
+---
+
+## 4️⃣ Common Anti-Patterns 🚨
+
+### ❌ Treating DoR as a gatekeeping bureaucracy
+
+* DoR is a **team agreement**, not a weapon
+
+### ❌ DoD is different for every story
+
+* DoD must be **consistent across the team**
+
+### ❌ “Code complete” = Done
+
+* That’s *Waterfall thinking in Agile clothing*
+
+---
+
+## 5️⃣ A Simple Mental Model
+
+Think of Agile work like cooking:
+
+* **DoR** → *Ingredients prepared & recipe understood*
+* **DoD** → *Dish cooked, plated, and safe to serve*
+
+---
+
+## 6️⃣ Pro Tip (from experienced teams)
+
+* Start **simple**
+* Evolve DoR & DoD **retrospectively**
+* Write them down **where everyone can see**
+

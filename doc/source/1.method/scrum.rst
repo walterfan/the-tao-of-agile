@@ -97,14 +97,32 @@ Scrum 如何提高开发效率
 
 模板
 ---------------------
-* [initiative](./template/initiative.md)
-* [feature](./template/feature.md)
-* [story](./template/story.md)
-* [bug](./template/bug.md)
 
-* [spring_plan](./template/spring_plan.md), [冲刺计划](./template/spring_plan_cn.md)
-* [spring_retrospective](./template/spring_retrospective.md), [冲刺反省](./template/spring_retrospective_cn.md)
-* [spring_review](./template/spring_review.md), [冲刺回顾](./template/spring_review_cn.md)
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   ./template/initiative.md
+   ./template/feature.md
+   ./template/story.md
+   ./template/bug.md
+   ./template/sprint_plan.md
+   ./template/sprint_plan_cn.md
+   ./template/sprint_retrospective.md
+   ./template/sprint_retrospective_cn.md
+   ./template/sprint_review.md
+   ./template/sprint_review_cn.md
+
+* :doc:`initiative <./template/initiative>`
+* :doc:`feature <./template/feature>`
+* :doc:`story <./template/story>`
+* :doc:`bug <./template/bug>`
+
+* :doc:`sprint_plan <./template/sprint_plan>`, :doc:`冲刺计划 <./template/sprint_plan_cn>`
+* :doc:`sprint_retrospective <./template/sprint_retrospective>`, :doc:`冲刺反省 <./template/sprint_retrospective_cn>`
+* :doc:`sprint_review <./template/sprint_review>`, :doc:`冲刺回顾 <./template/sprint_review_cn>`
+
+
 
 
 结论

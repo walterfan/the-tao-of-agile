@@ -10,8 +10,8 @@
 1. What is the problem? 
 2. What is the root cause? 
 3. What is the solution?
-  - 1) Success criteria (DoD) 
-  - 2) UE/UX Impacts 
+  - 1) Success criteria (DoD)
+  - 2) UE/UX Impacts
   - 3) Metrics: LMTA(Log, Metrics, Tracing, Alert)
   - 4) Dependencies
   - 5) Risks
